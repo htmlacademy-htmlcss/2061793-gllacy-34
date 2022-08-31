@@ -1,0 +1,117 @@
+/* Подключение шрифтов к странице */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/inter-400.woff2);
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  src: url(../fonts/inter-700.woff2);
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 900;
+  src: url(../fonts/inter-900.woff2);
+  font-display: swap;
+}
+
+/* Стили для скрытых элементов */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.page {
+  min-height: 100%;
+  font-family: 'Inter', sans-serif;
+  color: #2D3440;
+  background-color: #FEAFC3;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Стили для header */
+.header {
+  width: 1170px;
+  margin: 0 auto;
+}
+
+/* Состояния для логотипа в блоке header */
+.header__logo-link:hover {
+  opacity: 0.7;
+}
+
+.header__logo-link:active {
+  opacity: 0.5;
+}
+
+.header__logo-link:focus {
+  outline: 2px solid #2D3440;
+}
+
+.header__navigation-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  font-size: 16px;
+  line-height: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.header__navigation-link {
+  color: inherit;
+  text-decoration: none;
+  padding: 8px 16px;
+  box-sizing: border-box;
+  border-radius: 30px;
+}
+
+/* Состояния для пунктов меню */
+.header__navigation-link:hover {
+  background-color: rgba(252, 252, 252, 0.5);
+}
+
+.header__navigation-link:active {
+  background-color: #FCFCFC;
+}
+
+.header__navigation-link:focus {
+  background-color: rgba(252, 252, 252, 0.5);
+  outline: 2px solid #2D3440;
+}
+
+.header__telefone-link {
+  color: inherit;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+/* Состояния для ссылки с номером телефона */
+.header__telefone-link:hover {
+  opacity: 0.7;
+}
+
+.header__telefone-link:active {
+  opacity: 0.5;
+}
+
+.header__telefone-link:focus {
+  outline: 2px solid #2D3440;
+}
