@@ -48,6 +48,7 @@
 .header {
   width: 1170px;
   margin: 0 auto;
+  display: flex;
 }
 
 /* Состояния для логотипа в блоке header */
@@ -114,4 +115,42 @@
 
 .header__telefone-link:focus {
   outline: 2px solid #2D3440;
+}
+
+.header__user-navigation-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+}
+
+.header__user-navigation-link {
+  background-color: rgba(252, 252, 252, 0.3);
+  border-radius: 27px;
+  padding: 8px;
+  display: flex;
+}
+
+.header__link-icon_search {
+  width: 16px;
+  height: 16px;
+  background-image: url(../images/header-icon-search.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.header__link-icon_login{
+  width: 16px;
+  height: 16px;
+  background-image: url(../images/header-icon-login.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.header__link-icon_basket{
+  width: 16px;
+  height: 16px;
+  background-image: url(../images/header-icon-basket.svg);
+  background-position: center;
+  background-repeat: no-repeat;
 }
