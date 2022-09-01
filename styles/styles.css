@@ -48,7 +48,15 @@
 .header {
   width: 1170px;
   margin: 0 auto;
+  padding-top: 13px;
+  padding-bottom: 13px;
   display: flex;
+  align-items: center;
+}
+
+.header__logo-link {
+  margin-top: 3px;
+  margin-right: 16px;
 }
 
 /* Состояния для логотипа в блоке header */
@@ -65,6 +73,7 @@
 }
 
 .header__navigation-list {
+  max-width: 400px;
   margin: 0;
   padding: 0;
   list-style-type: none;
@@ -72,6 +81,7 @@
   line-height: 20px;
   display: flex;
   flex-wrap: wrap;
+  row-gap: 20px;
 }
 
 .header__navigation-link {
@@ -97,6 +107,8 @@
 }
 
 .header__telefone-link {
+  margin-left: auto;
+  margin-right: 17px;
   color: inherit;
   text-decoration: none;
   font-weight: 700;
@@ -118,39 +130,160 @@
 }
 
 .header__user-navigation-list {
+  max-width: 270px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  font-size: 14px;
+  line-height: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.header__user-navigation-link {
+  color: inherit;
+  text-decoration: none;
+  background-color: rgba(252, 252, 252, 0.3);
+  border-radius: 27px;
+  display: flex;
+}
+
+.header__search-link {
+  padding: 8px;
+}
+
+.header__login-link, .header__basket-link {
+  padding: 6px 16px;
+}
+
+.header__link-icon_login, .header__link-icon_basket {
+  margin-right: 6px;
+}
+
+.header__link-icon_login, .header__link-icon_basket, .header__link-icon_search {
+  fill: #2D3440;
+}
+
+.header__basket-counter {
+  margin-right: 5px;
+}
+
+/* Состояния для кнопок пользовательского меню */
+.header__user-navigation-link:hover {
+  background-color: rgba(252, 252, 252, 0.5);
+}
+
+.header__user-navigation-link:active {
+  background-color: #FCFCFC;
+}
+
+.header__user-navigation-link:focus {
+  background-color: rgba(252, 252, 252, 0.5);
+  outline: 2px solid #2D3440;
+}
+
+/* Состояние для выбранной страницы или нажатой кнопки */
+.header__link_active {
+  background-color: #FF4A78;
+  color: #FCFCFC;
+}
+
+.header__icon_active {
+  fill: #FCFCFC;
+}
+
+/* Стили для presents */
+.presents {
+  width: 1170px;
+  margin: 80px auto;
+  flex-grow: 1;
+}
+
+.presents__title {
+  max-width: 435px;
+  margin: 0 auto;
+  margin-bottom: 54px;
+  text-align: center;
+  font-weight: 900;
+  font-size: 32px;
+  line-height: 46px;
+}
+
+.presents__list {
   margin: 0;
   padding: 0;
   list-style-type: none;
   display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
 }
 
-.header__user-navigation-link {
-  background-color: rgba(252, 252, 252, 0.3);
-  border-radius: 27px;
-  padding: 8px;
-  display: flex;
+.presents__card {
+  min-width: calc(570px - (36px * 2));
+  padding: 36px;
+  background-color: #FF7799;
+  border-radius: 16px;
 }
 
-.header__link-icon_search {
-  width: 16px;
-  height: 16px;
-  background-image: url(../images/header-icon-search.svg);
-  background-position: center;
+.presents__card:nth-of-type(1) {
+  background-image: url(../images/presents-raspberry.png);
   background-repeat: no-repeat;
+  background-position: bottom 0 right 0;
 }
 
-.header__link-icon_login{
-  width: 16px;
-  height: 16px;
-  background-image: url(../images/header-icon-login.svg);
-  background-position: center;
+.presents__card:nth-of-type(2) {
+  background-image: url(../images/presents-marshmallow.png);
   background-repeat: no-repeat;
+  background-position: bottom 0 right 0;
 }
 
-.header__link-icon_basket{
-  width: 16px;
-  height: 16px;
-  background-image: url(../images/header-icon-basket.svg);
-  background-position: center;
-  background-repeat: no-repeat;
+.presents__card-title {
+  max-width: 328px;
+  margin-top: 0;
+  margin-bottom: 28px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.presents__card-text {
+  max-width: 320px;
+  margin-top: 0;
+  margin-bottom: 28px;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.presents__card:nth-of-type(2) .presents__card-text {
+  max-width: 300px;
+}
+
+.presents__card-link {
+  padding: 12px 32px;
+  display: inline-block;
+  background-color: #FCFCFC;
+  text-decoration: none;
+  color: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  box-sizing: border-box;
+  border-radius: 26px;
+  box-shadow: 0 0 0 4px rgba(252, 252, 252, 0.4), 0 4px 12px rgba(45, 52, 64, 0.1);
+}
+
+/* Состояния для кнопок в блоке presents */
+.presents__card-link:hover {
+  background-color: rgba(252, 252, 252, 0.4);
+  box-shadow: 0 0 0 4px #FCFCFC;
+}
+
+.presents__card-link:active {
+  box-shadow: 0 0 0 2px #2D3440;
+}
+
+.presents__card-link:focus {
+  background-color: rgba(252, 252, 252, 0.5);
+  box-shadow: 0 0 0 2px #2D3440;
 }
