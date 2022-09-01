@@ -197,6 +197,7 @@
 .presents {
   width: 1170px;
   margin: 80px auto;
+  margin-bottom: 82px;
   flex-grow: 1;
 }
 
@@ -286,4 +287,117 @@
 .presents__card-link:focus {
   background-color: rgba(252, 252, 252, 0.5);
   box-shadow: 0 0 0 2px #2D3440;
+}
+
+/* Стили для catalog */
+.catalog {
+  width: 1170px;
+  margin: 0 auto;
+  margin-bottom: 80px;
+}
+
+.catalog__title {
+  max-width: 527px;
+  margin: 0 auto;
+  margin-bottom: 106px;
+  text-align: center;
+  font-weight: 900;
+  font-size: 32px;
+  line-height: 46px;
+}
+
+.catalog__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(4, 270px);
+  gap: 30px;
+}
+
+.catalog__card {
+  padding: 133px 40px 24px 40px;
+  background-color: #FCFCFC;
+  border-radius: 8px;
+  position: relative;
+}
+
+.catalog__card-image {
+  position: absolute;
+  top: -51px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.catalog__card-title {
+  margin: 0;
+  margin-bottom: 8px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.catalog__card-text {
+  margin-top: 0;
+  margin-bottom: 16px;
+  text-align: center;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.catalog__price-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.catalog__card-price {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.catalog__card-basket {
+  width: 32px;
+  height: 32px;
+  border: none;
+  border-radius: 50%;
+  background-color: #FF2F64;
+  cursor: pointer;
+}
+
+.catalog__card-basket-svg {
+  fill: #FCFCFC;
+}
+
+/* Состояния для кнопки корзины */
+.catalog__card-basket:hover {
+  background-color: rgba(252, 252, 252, 0.3);
+  outline: 2px solid #FF2F64;
+}
+
+.catalog__card-basket:hover .catalog__card-basket-svg {
+  fill: #2D3440;
+}
+
+.catalog__card-basket:active {
+  background-color: #FFCBD8;
+  outline: 2px solid #FF2F64;
+}
+
+.catalog__card-basket:active .catalog__card-basket-svg {
+  fill: #2D3440;
+}
+
+.catalog__card-basket:focus {
+  outline: 2px solid #2D3440;
+}
+
+.catalog__card-basket:disabled {
+  background-color: #B9B9B9;
+}
+
+.catalog__card-basket:disabled .catalog__card-basket-svg {
+  fill: #565C66;
 }
