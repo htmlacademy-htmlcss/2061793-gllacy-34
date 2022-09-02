@@ -312,7 +312,8 @@
   list-style-type: none;
   display: grid;
   grid-template-columns: repeat(4, 270px);
-  gap: 30px;
+  column-gap: 30px;
+  row-gap: 91px;
 }
 
 .catalog__card {
@@ -361,6 +362,7 @@
 .catalog__card-basket {
   width: 32px;
   height: 32px;
+  box-sizing: border-box;
   border: none;
   border-radius: 50%;
   background-color: #FF2F64;
@@ -374,7 +376,7 @@
 /* Состояния для кнопки корзины */
 .catalog__card-basket:hover {
   background-color: rgba(252, 252, 252, 0.3);
-  outline: 2px solid #FF2F64;
+  border: 2px solid #FF2F64;
 }
 
 .catalog__card-basket:hover .catalog__card-basket-svg {
@@ -383,7 +385,7 @@
 
 .catalog__card-basket:active {
   background-color: #FFCBD8;
-  outline: 2px solid #FF2F64;
+  border: 2px solid #FF2F64;
 }
 
 .catalog__card-basket:active .catalog__card-basket-svg {
@@ -391,7 +393,7 @@
 }
 
 .catalog__card-basket:focus {
-  outline: 2px solid #2D3440;
+  border: 2px solid #2D3440;
 }
 
 .catalog__card-basket:disabled {
@@ -400,4 +402,111 @@
 
 .catalog__card-basket:disabled .catalog__card-basket-svg {
   fill: #565C66;
+}
+
+/* Стили для benefits */
+.benefits {
+  width: 1170px;
+  margin: 0 auto;
+  margin-bottom: 80px;
+  padding: 80px 0;
+  border-radius: 16px;
+  background-image: url(../images/benefits-background.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 1;
+}
+
+.benefits::before {
+  content: '';
+  width: calc(100% - (24px * 2));
+  height: calc(100% - (24px * 2));
+  background-color: #FFFFFF;
+  border-radius: 16px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+.benefits__title {
+  max-width: 995px;
+  margin: 0 auto;
+  margin-bottom: 56px;
+  text-align: center;
+  font-weight: 900;
+  font-size: 32px;
+  line-height: 46px;
+}
+
+.benefits__list {
+  max-width: calc(442px + 442px + 96px);
+  margin: 0 auto;
+  padding: 0;
+  padding-left: 64px;
+  list-style-type: none;
+  font-size: 16px;
+  line-height: 22px;
+  display: grid;
+  grid-template-columns: repeat(2, 442px);
+  row-gap: 40px;
+  column-gap: 96px;
+}
+
+.benefits__item {
+  position: relative;
+}
+
+.item_type_ingredients {
+  max-width: 420px;
+}
+
+.item_type_production::before {
+  content: '';
+  width: 48px;
+  height: 48px;
+  background-image: url(../images/benefits-ice-cream.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  left: -63px;
+}
+
+.item_type_ingredients::before {
+  content: '';
+  width: 48px;
+  height: 48px;
+  background-image: url(../images/benefits-cow.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  left: -63px;
+}
+
+.item_type_farmers::before {
+  content: '';
+  width: 48px;
+  height: 48px;
+  background-image: url(../images/benefits-leaf.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  left: -63px;
+}
+
+.item_type_dilivery::before {
+  content: '';
+  width: 48px;
+  height: 48px;
+  background-image: url(../images/benefits-thermometer.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  left: -64px;
 }
