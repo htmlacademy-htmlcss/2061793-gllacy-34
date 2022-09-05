@@ -510,3 +510,123 @@
   top: 0;
   left: -64px;
 }
+
+.subscription__wrapper {
+  width: 1170px;
+  margin: 0 auto;
+  margin-bottom: 80px;
+  display: grid;
+  grid-template-columns: repeat(2, 570px);
+  gap: 30px;
+}
+
+/* Стили для карточки с ссылкой на блог */
+.article {
+  box-sizing: border-box;
+  min-height: 224px;
+  padding: 32px;
+  border-radius: 16px;
+  background-image: url(../images/article-background.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.article__notice {
+  display: block;
+  margin-bottom: 12px;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.article__title {
+  max-width: 305px;
+  margin: 0;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+}
+
+/* Стили для блока с подпиской */
+.subscription {
+  padding: 26px;
+  border-radius: 16px;
+  background-image: url(../images/subscription-background.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+}
+
+.subscription::after {
+  content: '';
+  width: calc(100% - (6px * 2));
+  height: calc(100% - (6px * 2));
+  border-radius: 16px;
+  background-color: #FFFFFF;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+.subscription__text {
+  max-width: 506px;
+  margin-bottom: 42px;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.subscription__form {
+  display: flex;
+}
+
+.subscription__input {
+  width: 332px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  padding-left: 16px;
+  border: 1px solid #B9B9B9;
+  border-radius: 4px;
+}
+
+.subscription__input::placeholder {
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 20px;
+  color: #B9B9B9;
+}
+
+.button_color_pink {
+  display: inline-block;
+  background-color: #FF2F64;
+  color: #FCFCFC;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 26px;
+  box-shadow: 0 0 0 4px rgba(255, 47, 100, 0.3), 0 4px 12px rgba(45, 52, 64, 0.1);
+}
+
+.button_color_pink:hover {
+  color: #2D3440;
+  background-color: rgba(252, 252, 252, 0.3);
+  box-shadow: 0 0 0 4px #FF2F64, 0 4px 12px rgba(45, 52, 64, 0.1);
+}
+
+.button_color_pink:active {
+  background-color: #FEAFC3;
+  box-shadow: 0 0 0 2px #2D3440, 0 4px 12px rgba(45, 52, 64, 0.1);
+}
+
+.button_color_pink:focus {
+  box-shadow: 0 0 0 2px #2D3440, 0 4px 12px rgba(45, 52, 64, 0.1);
+}
+
+.button_color_pink:disabled {
+
+}
