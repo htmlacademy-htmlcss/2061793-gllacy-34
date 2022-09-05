@@ -35,6 +35,67 @@
   overflow: hidden;
 }
 
+/* Стили для розовых кнопок */
+.button_color_pink {
+  display: inline-block;
+  background-color: #FF2F64;
+  color: #FCFCFC;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 26px;
+  box-shadow: 0 0 0 4px rgba(255, 47, 100, 0.3), 0 4px 12px rgba(45, 52, 64, 0.1);
+  cursor: pointer;
+}
+
+.button_color_pink:hover {
+  color: #2D3440;
+  background-color: rgba(252, 252, 252, 0.3);
+  box-shadow: 0 0 0 4px #FF2F64, 0 4px 12px rgba(45, 52, 64, 0.1);
+}
+
+.button_color_pink:active {
+  background-color: #FEAFC3;
+  box-shadow: 0 0 0 2px #2D3440, 0 4px 12px rgba(45, 52, 64, 0.1);
+}
+
+.button_color_pink:focus {
+  box-shadow: 0 0 0 2px #2D3440, 0 4px 12px rgba(45, 52, 64, 0.1);
+}
+
+.button_color_pink:disabled {
+  color: #565C66;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  background-color: #B9B9B9;
+  box-shadow: rgba(185, 185, 185, 0.3), 0 4px 12px rgba(45, 52, 64, 0.1);
+}
+
+/* Состояния для инпутов */
+.input:hover {
+  outline: 1px solid #2D3440;
+}
+
+.input:focus {
+  outline: 2px solid #2D3440;
+}
+
+.input:disabled {
+  background-color: #E7E7E7;
+  outline: 1px solid #B9B9B9;
+}
+
+.input_type_error {
+  outline: 1px solid #EA5454;
+}
+
+.input_type_error:hover {
+  outline: 2px solid #EA5454;
+}
+
 .page {
   min-height: 100%;
   font-family: 'Inter', sans-serif;
@@ -530,11 +591,27 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Состояния для карточки с ссылкой на блог */
+.article:hover {
+  opacity: 0.7;
+}
+
+.article:active {
+  opacity: 0.3;
+}
+
+.article:focus {
+  outline: 2px solid #2D3440;
 }
 
 .article__notice {
   display: block;
-  margin-bottom: 12px;
+  max-width: 190px;
+  margin-bottom: 14px;
   font-size: 16px;
   line-height: 20px;
 }
@@ -549,7 +626,7 @@
 
 /* Стили для блока с подпиской */
 .subscription {
-  padding: 26px;
+  padding: 32px 32px;
   border-radius: 16px;
   background-image: url(../images/subscription-background.png);
   background-position: center;
@@ -574,59 +651,38 @@
 
 .subscription__text {
   max-width: 506px;
-  margin-bottom: 42px;
+  margin-top: 0;
+  margin-bottom: 44px;
   font-size: 16px;
   line-height: 22px;
 }
 
 .subscription__form {
   display: flex;
+  align-items: center;
 }
 
 .subscription__input {
   width: 332px;
-  padding-top: 14px;
-  padding-bottom: 14px;
+  box-sizing: border-box;
+  padding-top: 16px;
+  padding-bottom: 12px;
   padding-left: 16px;
-  border: 1px solid #B9B9B9;
+  margin-right: 17px;
+  border: none;
+  outline: 1px solid #B9B9B9;
   border-radius: 4px;
+  font-size: 17px;
+  line-height: 20px;
 }
 
 .subscription__input::placeholder {
   font-family: inherit;
-  font-size: 16px;
+  font-size: 17px;
   line-height: 20px;
   color: #B9B9B9;
 }
 
-.button_color_pink {
-  display: inline-block;
-  background-color: #FF2F64;
-  color: #FCFCFC;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 20px;
-  box-sizing: border-box;
-  border: none;
-  border-radius: 26px;
-  box-shadow: 0 0 0 4px rgba(255, 47, 100, 0.3), 0 4px 12px rgba(45, 52, 64, 0.1);
-}
-
-.button_color_pink:hover {
-  color: #2D3440;
-  background-color: rgba(252, 252, 252, 0.3);
-  box-shadow: 0 0 0 4px #FF2F64, 0 4px 12px rgba(45, 52, 64, 0.1);
-}
-
-.button_color_pink:active {
-  background-color: #FEAFC3;
-  box-shadow: 0 0 0 2px #2D3440, 0 4px 12px rgba(45, 52, 64, 0.1);
-}
-
-.button_color_pink:focus {
-  box-shadow: 0 0 0 2px #2D3440, 0 4px 12px rgba(45, 52, 64, 0.1);
-}
-
-.button_color_pink:disabled {
-
+.subscription__button {
+  padding: 12px 34px;
 }
