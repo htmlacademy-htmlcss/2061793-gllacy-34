@@ -233,14 +233,36 @@
 
       </div>
 
+      <!-- Блок dilivery -->
       <section class="dilivery">
+
         <div class="dilivery__text-container">
           <h2 class="dilivery__title">Доставка любимого мороженого на дом</h2>
           <p class="dilivery__text">Хочется полакомиться любимым десертом, но нет времени съездить в магазин? Закажите доставку мороженого на дом, и курьер привезёт вам ваш заказ в течение часа!</p>
         </div>
-        <form class="dilivery__form">
 
+        <!-- Форма для оформления доставки -->
+        <form class="dilivery__form" action="https://echo.htmlacademy.ru/" method="post">
+          <p class="dilivery__form-text">Укажите адрес и дату доставки, и мы свяжемся с вами, чтобы подтвердить заказ.</p>
+
+          <div class="dilivery__inputs-container">
+            <p class="dilivery__data">
+              <label class="dilivery__label" for="data-input">Дата</label>
+              <input type="text" class="dilivery__data-input input" type="data" name="data-input" id="data-input" placeholder="01.04.2020" required>
+            </p>
+            <p class="dilivery__telefone">
+              <label class="dilivery__label" for="telefone-input">Телефон</label>
+              <input type="text" class="dilivey__telefone-input input" type="tel" name="telefone-input" id="telefone-input" placeholder="+7 800 999-00-00" required>
+            </p>
+          </div>
+
+          <p class="dilivery__address">
+            <label class="dilivery__label" for="address-input">Адрес</label>
+            <input type="text" class="dilivery__address-input input" type="text" name="address-input" id="address-input" placeholder="ул. Большая Конюшенная, 19/8" required>
+          </p>
+          <button class="dilivery__button button_color_pink" type="submit">Отправить</button>
         </form>
+
       </section>
 
     </main>
