@@ -888,10 +888,16 @@
   flex-wrap: wrap;
 }
 
+.socnetworks-icon {
+  fill: #FCFCFC;
+}
+
 .socnetworks-link {
-  display: inline-block;
-  width: 28px;
-  height: 28px;
+
+}
+
+.socnetworks-link:hover {
+  background-color: #2D3440;
 }
 
 .socnetworks-item {
@@ -1009,4 +1015,85 @@
 
 .footer__copyright-link:focus {
   outline: 2px solid #2D3440;
+}
+
+/* Стили для выпадающего меню НЕ РАБОТАЕТ НАДО ПОПРАВИТЬ*/
+.header__navigation-catalog:focus-within .header__navigation-link {
+  background-color: #FF4A78;
+  color: #FCFCFC;
+}
+
+.header__navigation-catalog:hover {
+  position: relative;
+}
+
+.header__submenu {
+  width: 135px;
+  margin: 0;
+  padding: 16px 0 9px 0;
+  box-sizing: border-box;
+  background-color: #FCFCFC;
+  box-shadow: 0 8px 16px rgba(45, 52, 64, 0.12);
+  border-radius: 4px;
+  list-style-type: none;
+  display: none;
+  position: absolute;
+  top: 36px;
+  left: 2px;
+}
+
+.header__navigation-catalog:hover .header__submenu {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.header__submenu-item {
+  margin-bottom: 4px;
+}
+
+.header__submenu-item:last-of-type {
+  margin-bottom: 0;
+}
+
+.header__submenu-title {
+  margin-bottom: 19px;
+  padding: 0 12px 0 16px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  position: relative;
+}
+
+.header__submenu-title::after {
+  content: '';
+  width: 103px;
+  height: 1px;
+  background-color: #B9B9B9;
+  position: absolute;
+  top: 31px;
+  left: 16px;
+}
+
+.header__submenu-link {
+  display: block;
+  padding: 4px 12px 4px 16px;
+  font-size: 14px;
+  line-height: 20px;
+  color: inherit;
+  text-decoration: none;
+}
+
+.header__submenu-link:hover {
+  background-color: #FFCBD8;
+}
+
+.header__submenu-link:active {
+  background-color: #FF7799;
+}
+
+.header__submenu-link:focus {
+  background-color: #FF4A78;
+  color: #FCFCFC;
+  outline: none;
 }
