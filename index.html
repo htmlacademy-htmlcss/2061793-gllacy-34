@@ -80,6 +80,26 @@
                 4.98022 5.86189 4.71987Z"/>
               </svg>Вход
             </a>
+
+            <!-- Модальное окно авторизации -->
+            <div class="login-popup">
+              <h2 class="login-popup__title">Личный кабинет</h2>
+              <form class="login-popup__form" action="https://echo.htmlacademy.ru/" method="post">
+                <label class="visually-hidden" for="login-input">Поле ввода логина.</label>
+                <input class="login-popup__input_login input" type="email" name="login-input" id="login-input" placeholder="email@example.com" required>
+                <label class="visually-hidden" for="password-input">Поле ввода пароля.</label>
+                <input class="login-popup__input_password input" type="password" name="password-input" id="password-input" placeholder="******" required>
+
+                <div class="login-popup__button-and-link-container">
+                  <button class="login-popup__button button_color_pink">Войти</button>
+                  <div class="login-popup__link-container">
+                    <a class="login-popup__link" href="#">Забыли пароль?</a>
+                    <a class="login-popup__link" href="#">Регистрация</a>
+                  </div>
+                </div>
+              </form>
+            </div>
+
           </li>
 
           <li class="header__user-navigation-item">

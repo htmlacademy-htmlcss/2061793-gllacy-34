@@ -1419,8 +1419,13 @@
   display: flex;
 }
 
+.header__user-navigation-item:focus-within .search-input__form {
+  display: flex;
+}
+
 .header__user-navigation-item:focus-within .header__user-navigation-link {
   background-color: #FF4A78;
+  color: #FCFCFC;
 }
 
 .header__user-navigation-item:focus-within path {
@@ -1429,6 +1434,7 @@
 
 .header__user-navigation-item:hover .header__user-navigation-link {
   background-color: #FF4A78;
+  color: #FCFCFC;
 }
 
 .header__user-navigation-item:hover path {
@@ -1450,4 +1456,103 @@
   font-size: 16px;
   line-height: 20px;
   color: #B9B9B9;
+}
+
+/* Стили для модального окна с авторизацией */
+.login-popup {
+  max-width: 420px;
+  padding: 48px 48px 52px 48px;
+  background-color: #FCFCFC;
+  box-sizing: border-box;
+  border-radius: 4px;
+  filter: drop-shadow(0 15px 40px rgba(45, 52, 64, 0.12));
+  position: absolute;
+  left: -333px;
+  top: 40px;
+  display: none;
+  flex-direction: column;
+  z-index: 1;
+}
+
+.login-popup::after {
+  content: '';
+  width: 100%;
+  height: 10px;
+  background-color: none;
+  position: absolute;
+  left: 0;
+  bottom: 100%;
+}
+
+.header__user-navigation-item:hover .login-popup {
+  display: flex;
+}
+
+.header__user-navigation-item:focus-within .login-popup {
+  display: flex;
+}
+
+.login-popup__title {
+  max-width: 324px;
+  margin: 0;
+  margin-bottom: 32px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.login-popup__input_login, .login-popup__input_password {
+  width: 324px;
+  padding: 12px 0 12px 16px;
+  box-sizing: border-box;
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.login-popup__input_login {
+  margin-bottom: 16px;
+}
+
+.login-popup__input_password {
+  margin-bottom: 32px;
+}
+
+.login-popup__button {
+  margin-right: 23px;
+  padding: 12px 32px;
+}
+
+.login-popup__button-and-link-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.login-popup__link-container {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Стили состояний для ссылок */
+.login-popup__link {
+  margin-bottom: 4px;
+  font-size: 14px;
+  line-height: 20px;
+  color: #2D3440;
+}
+
+.login-popup__link:last-of-type {
+  margin-bottom: 0;
+}
+
+.login-popup__link:hover {
+  opacity: 0.7;
+}
+
+.login-popup__link:active {
+  opacity: 0.5;
+}
+
+.login-popup__link:focus {
+  outline: 2px solid #2D3440;
 }
