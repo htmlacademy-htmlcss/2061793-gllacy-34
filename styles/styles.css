@@ -1556,3 +1556,156 @@
 .login-popup__link:focus {
   outline: 2px solid #2D3440;
 }
+
+/* Стили для корзины */
+.basket {
+  width: 441px;
+  padding: 48px 48px 48px 45px;
+  background-color: #FCFCFC;
+  box-sizing: border-box;
+  border-radius: 4px;
+  filter: drop-shadow(0 15px 40px rgba(45, 52, 64, 0.12));
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 40px;
+  left: -326px;
+  z-index: 1;
+}
+
+.basket::after {
+  content: '';
+  width: 100%;
+  height: 10px;
+  background-color: none;
+  position: absolute;
+  left: 0;
+  bottom: 100%;
+}
+
+.header__user-navigation-item:hover .basket {
+  display: flex;
+}
+
+.header__user-navigation-item:focus-within .basket {
+  display: flex;
+}
+
+.basket__title {
+  max-width: 345px;
+  margin: 0;
+  margin-left: 3px;
+  margin-bottom: 32px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.basket__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  border-bottom: 1px solid #E7E7E7;
+}
+
+.basket__item {
+  width: 345px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.basket__item:last-of-type {
+  margin-bottom: 25px;
+}
+
+.basket__item-link {
+  text-decoration: none;
+  color: #2D3440;
+  display: flex;
+}
+
+.basket__item-link:hover {
+  opacity: 0.7;
+}
+
+.basket__item-link:active {
+  opacity: 0.5;
+}
+
+.basket__item-link:focus {
+  outline: 2px solid #2D3440;
+}
+
+.basket__item-image {
+  margin-right: 13px;
+}
+
+.basket__item-container {
+  width: 100px;
+  display: flex;
+  flex-direction: column;
+}
+
+.basket__item-title {
+  margin: 0;
+  margin-bottom: 4px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.basket__item-amount {
+  font-size: 14px;
+  line-height: 20px;
+  color: #B9B9B9;
+}
+
+.basket__item-price {
+  margin-left: auto;
+  margin-right: 52px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.basket__close-button {
+  width: 10px;
+  height: 10px;
+  background-image: url(../images/basket-close-button.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-color: inherit;
+  border: none;
+  cursor: pointer;
+}
+
+.basket__close-button:hover {
+  opacity: 0.7;
+}
+
+.basket__close-button:active {
+  opacity: 0.5;
+}
+
+.basket__close-button:focus {
+  outline: 2px solid #2D3440;
+}
+
+.basket__button-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.basket__button {
+  margin-top: 32px;
+  padding: 12px 34px;
+}
+
+.basket__totlal-price {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+}
