@@ -21,11 +21,11 @@
 
             <!-- Подменю -->
             <ul class="header__submenu">
-              <li class="header__submenu-title">Новинки</li>
-              <li class="header__submenu-item"><a href="" class="header__submenu-link">Сливочное</a></li>
-              <li class="header__submenu-item"><a href="" class="header__submenu-link">Щербеты</a></li>
-              <li class="header__submenu-item"><a href="" class="header__submenu-link">Фруктовый лед</a></li>
-              <li class="header__submenu-item"><a href="" class="header__submenu-link">Мелорин</a></li>
+              <li class="header__submenu-title"><a class="header__submenu-link" href="#">Новинки</a></li>
+              <li class="header__submenu-item"><a class="header__submenu-link" href="#">Сливочное</a></li>
+              <li class="header__submenu-item"><a class="header__submenu-link" href="#">Щербеты</a></li>
+              <li class="header__submenu-item"><a class="header__submenu-link" href="#">Фруктовый лед</a></li>
+              <li class="header__submenu-item"><a class="header__submenu-link" href="#">Мелорин</a></li>
             </ul>
 
           </li>
@@ -41,7 +41,9 @@
 
       <!-- Пользовательская навигация -->
       <nav class="header__user-navigation">
+
         <ul class="header__user-navigation-list">
+
           <li class="header__user-navigation-item">
             <a class="header__user-navigation-link header__search-link" href="#">
               <svg class="header__link-icon_search" aria-hidden="true" focusable="false" width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -54,7 +56,15 @@
                 12.8759Z"/>
               </svg>
             </a>
+
+            <!-- Поле ввода для поиска по сайту -->
+            <form class="search-input__form" action="https://echo.htmlacademy.ru/" method="post">
+              <label class="visually-hidden" for="search-input">Поле ввода для поиска по сайту.</label>
+              <input class="search-input input" type="text" id="search-input" name="search-input" placeholder="Поиск по сайту">
+            </form>
+
           </li>
+
           <li class="header__user-navigation-item">
             <a class="header__user-navigation-link header__login-link" href="#">
               <svg class="header__link-icon_login" aria-hidden="true" focusable="false" width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -71,6 +81,7 @@
               </svg>Вход
             </a>
           </li>
+
           <li class="header__user-navigation-item">
             <a class="header__user-navigation-link header__basket-link" href="#">
               <svg class="header__link-icon_basket" aria-hidden="true" focusable="false" width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -88,7 +99,9 @@
               <span class="header__basket-counter">2</span>товара
             </a>
           </li>
+
         </ul>
+
       </nav>
     </header>
 
@@ -295,7 +308,9 @@
       <!-- Блок catalog -->
       <section class="catalog">
         <h2 class="catalog__title">Попробуйте самые популярные вкусы нашего мороженого</h2>
+
         <ul class="catalog__list">
+
           <li class="catalog__card">
             <img class="catalog__card-image" width="192" height="184" src="./images/catalog-raspberry.png" alt="Малиновое мороженое.">
             <h3 class="catalog__card-title">Малинка</h3>
@@ -319,6 +334,7 @@
               </button>
             </div>
           </li>
+
           <li class="catalog__card">
             <img class="catalog__card-image" width="192" height="184" src="./images/catalog-pistachio.png" alt="Фисташковое мороженое.">
             <h3 class="catalog__card-title">Фисташка</h3>
@@ -342,6 +358,7 @@
               </button>
             </div>
           </li>
+
           <li class="catalog__card">
             <img class="catalog__card-image" width="192" height="184" src="./images/catalog-blueberry.png" alt="Черничное мороженое.">
             <h3 class="catalog__card-title">Черника</h3>
@@ -365,6 +382,7 @@
               </button>
             </div>
           </li>
+
           <li class="catalog__card">
             <img class="catalog__card-image" width="192" height="184" src="./images/catalog-bubble-gum.png" alt="Мороженое бабл-гам.">
             <h3 class="catalog__card-title">Бабл-гам</h3>
@@ -388,7 +406,9 @@
               </button>
             </div>
           </li>
+
         </ul>
+
       </section>
 
       <!-- Блок benefits -->
@@ -414,7 +434,7 @@
         <!-- Карточка с предложением подписки -->
         <section class="subscription">
           <p class="subscription__text">Подпишитесь на нашу сладкую рассылку и будьте всегда <br>в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
-          <form class="subscription__form">
+          <form class="subscription__form" action="https://echo.htmlacademy.ru/" method="post">
             <label class="visually-hidden" for="subscription-email">Поле для ввода e-mail.</label>
             <input class="subscription__input input" placeholder="email@example.com" type="email" name="subscription-email" id="subscription-email" required>
             <button class="subscription__button button_color_pink" type="submit">Отправить</button>
@@ -446,7 +466,7 @@
           </div>
           <p class="dilivery__address">
             <label class="dilivery__label" for="address-input">Адрес</label>
-            <input type="text" class="dilivery__address-input input" type="text" name="address-input" id="address-input" placeholder="ул. Большая Конюшенная, 19/8" required>
+            <input class="dilivery__address-input input" type="text" name="address-input" id="address-input" placeholder="ул. Большая Конюшенная, 19/8" required>
           </p>
           <button class="dilivery__button button_color_pink" type="submit">Отправить</button>
         </form>
