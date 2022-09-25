@@ -21,7 +21,7 @@
 
             <!-- Подменю -->
             <ul class="header__submenu">
-              <li class="header__submenu-title"><a class="header__submenu-link" href="#">Новинки</a></li>
+              <li class="header__submenu-item_new"><a class="header__submenu-link" href="#">Новинки</a></li>
               <li class="header__submenu-item"><a class="header__submenu-link" href="#">Сливочное</a></li>
               <li class="header__submenu-item"><a class="header__submenu-link" href="#">Щербеты</a></li>
               <li class="header__submenu-item"><a class="header__submenu-link" href="#">Фруктовый лед</a></li>
@@ -618,6 +618,30 @@
       </div>
 
     </footer>
+
+    <!-- Модальное окно формы обратной связи -->
+    <!-- Чтобы открыть модальное окно, необходимо добавить класс popup_opened -->
+    <div class="popup">
+      <div class="popup__container">
+
+        <button class="popup__button_close">
+          <span class="visually-hidden">Закрыть форму обратной связи.</span>
+        </button>
+        <h3 class="popup__title">Мы обязательно ответим вам!</h3>
+
+        <form class="popup__form" action="https://echo.htmlacademy.ru/" method="post">
+          <label class="visually-hidden" for="name-input">Поле ввода имени и фамилии.</label>
+          <input class="input popup__input" type="text" name="name-input" id="name-input" placeholder="Имя и фамилия" required>
+
+          <label class="visually-hidden" for="email-input">Поле ввода электронной почты.</label>
+          <input class="input popup__input" type="email" name="email-input" id="email-input" placeholder="email@example.com" required>
+
+          <label class="visually-hidden" for="message-input">Поле ввода сообщения.</label>
+          <textarea class="input popup__input popup__input_message" name="message-input" id="message-input" rows="6" placeholder="В свободной форме" required></textarea>
+          <button class="popup__button_send button_color_pink">Отправить</button>
+        </form>
+      </div>
+    </div>
 
   </body>
 </html>
