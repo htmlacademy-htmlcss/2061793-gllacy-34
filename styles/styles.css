@@ -1873,11 +1873,12 @@
 }
 
 /* СТИЛИ ДЛЯ СТРАНИЦЫ КАТАЛОГА */
-.content {
+.main-catalog {
   width: 1170px;
   margin: 0 auto;
 }
 
+/* Стили для блока с хлебными крошками */
 .breadcrumbs__list {
   margin-top: 39px;
   padding: 0;
@@ -1920,9 +1921,197 @@
   border-bottom: 2px solid #2D3440;
 }
 
+/* Стили для заголовка страницы */
 .page__title {
   margin-top: 15px;
+  margin-bottom: 40px;
   font-weight: 900;
   font-size: 32px;
   line-height: 46px;
+}
+
+/* Стили для блока с фильтрацией */
+.filter {
+  display: flex;
+}
+
+.filter__fieldset {
+  margin: 0;
+  margin-right: 24px;
+  padding: 0;
+  border: none;
+}
+
+.filter__title {
+  margin-left: 14px;
+  margin-bottom: 7px;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+/* Стили для сортировки */
+.filter__select {
+  width: 196px;
+  padding: 6px 14px;
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 20px;
+  color: #2D3440;
+  background-color: rgba(255, 255, 255, 0.3);
+  background-image: url(../images/select-arrow.svg);
+  background-repeat: no-repeat;
+  background-position: right 13px center;
+  border-radius: 20px;
+  box-sizing: border-box;
+  border: 2px solid rgba(255, 255, 255, 0);
+  appearance: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.filter__select:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.filter__select:focus {
+  background-color: rgba(255, 255, 255, 0.4);
+  border: 2px solid #FCFCFC;
+}
+
+/* Стили для фильтра по цене */
+.filter__fieldset_range {
+  display: flex;
+  flex-direction: column;
+}
+
+.filter__range-label {
+  font-size: 14px;
+  line-height: 20px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.filter__range-container {
+  display: flex;
+}
+
+.filter__range-input {
+  width: 30px;
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  color: #2D3440;
+  background-color: transparent;
+  border: none;
+  appearance: textfield;
+}
+
+.filter__range-input::-webkit-outer-spin-button,
+.filter__range-input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+.filter__range {
+  width: 196px;
+  height: 36px;
+  background-color: rgba(255, 255, 255, 0.3);
+  box-sizing: border-box;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.filter__range-scale {
+  width: 164px;
+  height: 4px;
+  background-color: rgba(34, 36, 40, 0.3);
+  border-radius: 2px;
+  position: relative;
+}
+
+.filter__range-bar {
+  position: absolute;
+  height: 4px;
+  background-color: #2d3440;
+}
+
+.filter__range-toggle {
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  background-color: #2d3440;
+  box-sizing: border-box;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+}
+
+.filter__range-toggle::after {
+  content: "";
+  width: 4px;
+  height: 4px;
+  background-color: #fcfcfc;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.toggle_min {
+  top: -5px;
+  left: -6px;
+}
+
+.toggle_max {
+  top: -5px;
+  right: -14px;
+}
+
+.filter__range-toggle:hover {
+  background-color: #fcfcfc;
+}
+
+.filter__range-toggle:hover::after {
+  background-color: #2d3440;
+}
+
+.filter__range-toggle:active {
+  background-color: #2d3440;
+}
+
+.filter__range-toggle:focus {
+  background-color: #fcfcfc;
+  outline: 2px solid #2d3440;
+}
+
+.filter__range-toggle:focus::after {
+  background-color: #2d3440;
+}
+
+/* Стили для чекбокса */
+.filter__radio-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.filter__radio-container {
+  position: relative;
+  display: block;
+}
+
+.filter__radio-mark {
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: 2px;
+  left: -25px;
+  box-sizing: border-box;
+  border: 2px solid #2D3440;
+  border-radius: 50%;
+  cursor: pointer;
 }
