@@ -2328,4 +2328,132 @@
   margin-right: 17px;
 }
 
-/* Стили для каталога */
+/* Стили для пагинации */
+.catalog__pagination-container {
+  margin-top: 56px;
+  padding-bottom: 80px;
+  border-bottom: 1px solid rgba(252, 252, 252, 0.3);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.catalog__button {
+  margin-left: 490px;
+  padding: 12px 32px;
+  background-color: #FCFCFC;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  border-radius: 26px;
+  box-shadow: 0 0 0 4px rgba(252, 252, 252, 0.4), 0 4px 12px rgba(45, 52, 64, 0.1);
+  cursor: pointer;
+}
+
+.catalog__button:hover {
+  background-color: rgba(252, 252, 252, 0.4);
+  box-shadow: 0 0 0 4px #FCFCFC;
+}
+
+.catalog__button:active {
+  box-shadow: 0 0 0 2px #2D3440;
+}
+
+.catalog__button:focus {
+  background-color: rgba(252, 252, 252, 0.5);
+  box-shadow: 0 0 0 2px #2D3440;
+}
+
+.catalog__pagination {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  line-height: 20px;
+  display: flex;
+  align-items: flex-start;
+  list-style-type: none;
+}
+
+.catalog__pagination-item {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+}
+
+.catalog__pagination-link {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #2D3440;
+  text-decoration: none;
+  outline: none;
+}
+
+.catalog__pagination-link:hover {
+  background-color: rgba(252, 252, 252, 0.5);
+  border-radius: 50%;
+}
+
+.catalog__pagination-link:active {
+  box-sizing: border-box;
+  background-color: rgba(252, 252, 252, 0.5);
+  border: 1px solid #FCFCFC;
+  border-radius: 50%;
+}
+
+.catalog__pagination-link:focus {
+  box-sizing: border-box;
+  background-color: rgba(252, 252, 252, 0.5);
+  border: 1px solid #2D3440;
+  border-radius: 50%;
+}
+
+.pagination_prev {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  display: inline-block;
+  background-image: url(../images/pagination-arrow.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transform: rotate(-180deg);
+}
+
+.pagination_next {
+  width: 16px;
+  height: 16px;
+  margin-left: 8px;
+  display: inline-block;
+  background-image: url(../images/pagination-arrow.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.pagination_current {
+  background-color: #FCFCFC;
+  border-radius: 50%;
+}
+
+.pagination_current:focus {
+  box-sizing: border-box;
+  background-color: #FCFCFC;
+  border: 1px solid #2D3440;
+  border-radius: 50%;
+}
+
+.pagination_disabled {
+  opacity: 0.3;
+}
+
+.catalog__page_catalog {
+  margin-bottom: 47px;
+}
