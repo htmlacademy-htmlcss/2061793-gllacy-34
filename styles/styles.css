@@ -1932,7 +1932,10 @@
 
 /* Стили для блока с фильтрацией */
 .filter {
+  max-width: 850px;
   display: flex;
+  row-gap: 15px;
+  flex-wrap: wrap;
 }
 
 .filter__fieldset {
@@ -2092,7 +2095,7 @@
   background-color: #2d3440;
 }
 
-/* Стили для чекбокса */
+/* Стили для чекбокса с выбором жирности */
 .filter__radio-list {
   margin: 0;
   padding: 0;
@@ -2165,7 +2168,119 @@
   opacity: 0.5;
 }
 
-/* НУЖНО ПОПРАВИТЬ! */
-.filter__radio-container:hover .filter__radio-mark::after {
+.filter__radio-container:hover .filter__radio-input[type="radio"]:checked + .filter__radio-mark::after {
   background-color: #FCFCFC;
+}
+
+.filter__radio-label {
+  cursor: pointer;
+}
+
+/* Стили для чекбокса с выбором наполнителя */
+.filter__checkbox-list {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  line-height: 20px;
+  display: flex;
+  list-style-type: none;
+  background-color: rgba(255, 255, 255, 0.3);
+  box-sizing: border-box;
+  border-radius: 20px;
+}
+
+.filter__checkbox-item {
+  margin-left: 40px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.filter__checkbox-item:first-of-type {
+  margin-left: 50px;
+}
+
+.filter__checkbox-item:last-of-type {
+  margin-right: 27px;
+}
+
+.filter__checkbox-container {
+  position: relative;
+  display: block;
+}
+
+.filter__checkbox-mark {
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  top: 50%;
+  left: -25px;
+  transform: translateY(-50%);
+  background-image: url(../images/checkbox.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  cursor: pointer;
+}
+
+.filter__checkbox-input[type="checkbox"]:checked + .filter__checkbox-mark {
+  background-image: url(../images/checkbox-checked.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.filter__checkbox-container:hover .filter__checkbox-mark {
+  background-image: url(../images/checkbox-hover.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.filter__checkbox-container:hover .filter__checkbox-input[type="checkbox"]:checked + .filter__checkbox-mark {
+  background-image: url(../images/checkbox-checked-hover.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.filter__checkbox-container {
+  cursor: pointer;
+}
+
+.filter__checkbox-input[type="checkbox"]:disabled + .filter__checkbox-mark {
+  opacity: 0.5;
+}
+
+.filter__button {
+  padding: 8px 53px;
+  margin-bottom: 2px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  align-self: flex-end;
+  background-color: rgba(252, 252, 252, 0.3);
+  box-sizing: border-box;
+  border: none;
+  border-radius: 20px;
+  outline: 3px solid rgba(252, 252, 252, 0.9);
+  cursor: pointer;
+}
+
+.filter__button:hover {
+  background-color: rgba(252, 252, 252, 0.9);
+  outline: 3px solid rgba(252, 252, 252, 0.3);
+}
+
+.filter__button:active {
+  background-color: rgba(252, 252, 252, 0.5);;
+  outline: 3px solid rgba(252, 252, 252, 0.5);
+}
+
+.filter__button:focus {
+  background-color: rgba(252, 252, 252, 0.5);;
+  outline: 3px solid #2D3440;
+}
+
+.filter__fieldset_checkbox {
+  margin-right: 17px;
 }
