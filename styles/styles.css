@@ -1895,6 +1895,18 @@
   line-height: 20px;
 }
 
+.breadcrumbs__link:hover {
+  opacity: 0.7;
+}
+
+.breadcrumbs__link:active {
+  opacity: 0.5;
+}
+
+.breadcrumbs__link:focus {
+  outline: 2px solid #2D3440;
+}
+
 .breadcrumbs__item {
   margin-right: 28px;
   position: relative;
@@ -1933,6 +1945,7 @@
 /* Стили для блока с фильтрацией */
 .filter {
   max-width: 850px;
+  margin-bottom: 96px;
   display: flex;
   row-gap: 15px;
   flex-wrap: wrap;
@@ -2014,6 +2027,14 @@
 .filter__range-input::-webkit-inner-spin-button {
   appearance: none;
   margin: 0;
+}
+
+.filter__range-input:hover {
+  opacity: 0.7;
+}
+
+.filter__range-input:focus {
+  outline: 2px solid #2D3440;
 }
 
 .filter__range {
@@ -2172,6 +2193,14 @@
   background-color: #FCFCFC;
 }
 
+.filter__radio-input[type="radio"]:focus + .filter__radio-mark {
+  border-color: #FCFCFC;
+}
+
+.filter__radio-input[type="radio"]:focus + .filter__radio-mark::after {
+  background-color: #FCFCFC;
+}
+
 .filter__radio-label {
   cursor: pointer;
 }
@@ -2243,6 +2272,20 @@
   background-size: cover;
 }
 
+.filter__checkbox-input:checked:focus + .filter__checkbox-mark {
+  background-image: url(../images/checkbox-checked-hover.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.filter__checkbox-input:focus + .filter__checkbox-mark {
+  background-image: url(../images/checkbox-hover.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
 .filter__checkbox-container {
   cursor: pointer;
 }
@@ -2252,8 +2295,8 @@
 }
 
 .filter__button {
-  padding: 8px 53px;
-  margin-bottom: 2px;
+  padding: 9px 53px;
+  margin-bottom: 1px;
   font-weight: 700;
   font-size: 14px;
   line-height: 20px;
@@ -2262,25 +2305,27 @@
   box-sizing: border-box;
   border: none;
   border-radius: 20px;
-  outline: 3px solid rgba(252, 252, 252, 0.9);
+  outline: 2px solid rgba(252, 252, 252, 0.9);
   cursor: pointer;
 }
 
 .filter__button:hover {
   background-color: rgba(252, 252, 252, 0.9);
-  outline: 3px solid rgba(252, 252, 252, 0.3);
+  outline: 2px solid rgba(252, 252, 252, 0.3);
 }
 
 .filter__button:active {
-  background-color: rgba(252, 252, 252, 0.5);;
-  outline: 3px solid rgba(252, 252, 252, 0.5);
+  background-color: rgba(252, 252, 252, 0.5);
+  outline: 2px solid rgba(252, 252, 252, 0.5);
 }
 
 .filter__button:focus {
-  background-color: rgba(252, 252, 252, 0.5);;
-  outline: 3px solid #2D3440;
+  background-color: rgba(252, 252, 252, 0.5);
+  outline: 2px solid #2D3440;
 }
 
 .filter__fieldset_checkbox {
   margin-right: 17px;
 }
+
+/* Стили для каталога */
