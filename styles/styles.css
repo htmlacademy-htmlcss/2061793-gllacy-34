@@ -2096,7 +2096,27 @@
 .filter__radio-list {
   margin: 0;
   padding: 0;
+  font-size: 14px;
+  line-height: 20px;
+  display: flex;
   list-style-type: none;
+  background-color: rgba(255, 255, 255, 0.3);
+  box-sizing: border-box;
+  border-radius: 20px;
+}
+
+.filter__radio-item {
+  margin-left: 41px;
+  padding-top: 8px;
+  padding-bottom: 10px;
+}
+
+.filter__radio-item:first-of-type {
+  margin-left: 47px;
+}
+
+.filter__radio-item:last-of-type {
+  margin-right: 24px;
 }
 
 .filter__radio-container {
@@ -2108,10 +2128,44 @@
   width: 16px;
   height: 16px;
   position: absolute;
-  top: 2px;
-  left: -25px;
+  top: 50%;
+  left: -23px;
+  transform: translateY(-50%);
   box-sizing: border-box;
   border: 2px solid #2D3440;
   border-radius: 50%;
   cursor: pointer;
+}
+
+.filter__radio-container:hover .filter__radio-mark {
+  border-color: #FCFCFC;
+}
+
+.filter__radio-input:disabled .filter__radio-mark {
+  opacity: 0.5;
+}
+
+.filter__radio-input[type="radio"]:checked + .filter__radio-mark::after {
+  content: '';
+  width: 7px;
+  height: 7px;
+  background-color: #2D3440;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 3px;
+  transform: translateY(-50%);
+}
+
+.filter__radio-input[type="radio"]:checked + .filter__radio-mark:hover::after {
+  background-color: #FCFCFC;
+}
+
+.filter__radio-input[type="radio"]:disabled + .filter__radio-mark::after {
+  opacity: 0.5;
+}
+
+/* НУЖНО ПОПРАВИТЬ! */
+.filter__radio-container:hover .filter__radio-mark::after {
+  background-color: #FCFCFC;
 }
