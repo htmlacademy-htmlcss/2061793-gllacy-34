@@ -2171,8 +2171,8 @@
 
 .filter__radio-input[type="radio"]:checked + .filter__radio-mark::after {
   content: '';
-  width: 7px;
-  height: 7px;
+  width: 6px;
+  height: 6px;
   background-color: #2D3440;
   border-radius: 50%;
   position: absolute;
@@ -2416,26 +2416,26 @@
 }
 
 .pagination_prev {
-  width: 16px;
-  height: 16px;
+  width: 24px;
+  height: 24px;
   margin-right: 8px;
   display: inline-block;
   background-image: url(../images/pagination-arrow.svg);
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 16px 16px;
   transform: rotate(-180deg);
 }
 
 .pagination_next {
-  width: 16px;
-  height: 16px;
+  width: 24px;
+  height: 24px;
   margin-left: 8px;
   display: inline-block;
   background-image: url(../images/pagination-arrow.svg);
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 16px 16px;
 }
 
 .pagination_current {
