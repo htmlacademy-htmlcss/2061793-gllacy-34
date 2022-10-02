@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <title>HTML Academy: Глейси</title>
     <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" type="image/png" href="./images/favicon.png">
   </head>
   <body class="page">
 
@@ -17,7 +19,7 @@
       <nav class="header__navigation">
         <ul class="header__navigation-list">
           <li class="header__navigation-item header__navigation-catalog">
-            <a class="header__navigation-link" href="#">Каталог</a>
+            <a class="header__navigation-link" href="catalog.html">Каталог</a>
 
             <!-- Подменю -->
             <ul class="header__submenu">
@@ -91,7 +93,7 @@
                 <input class="login-popup__input_password input" type="password" name="password-input" id="password-input" placeholder="******" required>
 
                 <div class="login-popup__button-and-link-container">
-                  <button class="login-popup__button button_color_pink">Войти</button>
+                  <button class="login-popup__button button_color_pink" type="submit">Войти</button>
                   <div class="login-popup__link-container">
                     <a class="login-popup__link" href="#">Забыли пароль?</a>
                     <a class="login-popup__link" href="#">Регистрация</a>
@@ -179,20 +181,20 @@
           <!-- Левая часть слайдера с текстом -->
           <ul class="slider__part_left">
 
-            <!-- Необходимо использовать класс visually-hidden, что бы "листать" слайд -->
+            <!-- Необходимо использовать класс slider__item_hidden, что бы "листать" слайд -->
             <li class="slider__text-item">
               <h1 class="slider__title">Нежный пломбир <br>с клубничным джемом</h1>
               <p class="slider__description">Натуральное мороженое из свежих сливок <br>и молока с вкуснейшим клубничным джемом – это идеальный десерт для всей семьи.</p>
               <button class="slider__button-order" type="submit">Заказать</button>
             </li>
 
-            <li class="slider__text-item visually-hidden">
+            <li class="slider__text-item slider__item_hidden">
               <h1 class="slider__title">Сливочное мороженое со вкусом банана</h1>
               <p class="slider__description">Сливочное мороженое с ярким банановым вкусом подарит вам свежесть и наслаждение даже в самый жаркий летний день.</p>
               <button class="slider__button-order" type="submit">Заказать</button>
             </li>
 
-            <li class="slider__text-item visually-hidden">
+            <li class="slider__text-item slider__item_hidden">
               <h1 class="slider__title">Карамельный пломбир <br>с маршмеллоу</h1>
               <p class="slider__description">Необычный сладкий десерт с карамельным топпингом и кусочками зефира завоюет сердца сладкоежек всех возрастов.</p>
               <button class="slider__button-order" type="submit">Заказать</button>
@@ -207,7 +209,7 @@
             slider__first-item и slider__first-image для тегов li и img соотвественно для ПЕРВОЙ БОЛЬШОЙ КАРТИНКИ,
             slider__second-item и slider__second-image для тегов li и img соотвественно для ВТОРОЙ МАЛЕНЬКОЙ КАРТИНКИ,
             slider__third-item и slider__third-image для тегов li и img соотвественно для ТРЕТЬЕЙ МАЛЕНЬКОЙ КАРТИНКИ.
-            Также необходимо использовать класс visually-hidden, чтобы показывать кнопки скролла для картинки с классом slider__first-image
+            Также необходимо убрать класс slider__item_hidden, чтобы показывать кнопки скролла для картинки с классом slider__first-image
             и скрывать для картинок с классами slider__second-image и slider__third-image -->
 
             <!-- Первая картинка -->
@@ -236,7 +238,7 @@
             <!-- Вторая картинка -->
             <li class="slider__second-item">
 
-              <button class="slider__button-scroll button_scroll-left visually-hidden" type="button">
+              <button class="slider__button-scroll button_scroll-left slider__item_hidden" type="button">
                 <svg aria-hidden="true" focusable="false" width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path fill-rule="evenodd" clip-rule="evenodd" d="M5.86474 11.1352C6.12443 11.3949 6.54549 11.3949 6.80519 11.1352C7.06489 10.8755 7.06489 10.4545
                   6.80519 10.1948L2.60391 5.99351L6.80523 1.79219C7.06492 1.53249 7.06492 1.11144 6.80522 0.85174C6.54553 0.592042 6.12447 0.592042 5.86477 0.85174L1.19606
@@ -246,7 +248,7 @@
 
               <img class="slider__second-image" width="306" height="507" src="./images/slider-ice-banana.png" alt="Фото сливочного мороженого со вкусом банана.">
 
-              <button class="slider__button-scroll button_scroll-right visually-hidden" type="button">
+              <button class="slider__button-scroll button_scroll-right slider__item_hidden" type="button">
                 <svg aria-hidden="true" focusable="false" width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path fill-rule="evenodd" clip-rule="evenodd" d="M5.86474 11.1352C6.12443 11.3949 6.54549 11.3949 6.80519 11.1352C7.06489 10.8755 7.06489 10.4545
                   6.80519 10.1948L2.60391 5.99351L6.80523 1.79219C7.06492 1.53249 7.06492 1.11144 6.80522 0.85174C6.54553 0.592042 6.12447 0.592042 5.86477 0.85174L1.19606
@@ -259,7 +261,7 @@
             <!-- Третья картинка -->
             <li class="slider__third-item">
 
-              <button class="slider__button-scroll button_scroll-left visually-hidden" type="button">
+              <button class="slider__button-scroll button_scroll-left slider__item_hidden" type="button">
                <svg aria-hidden="true" focusable="false" width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path fill-rule="evenodd" clip-rule="evenodd" d="M5.86474 11.1352C6.12443 11.3949 6.54549 11.3949 6.80519 11.1352C7.06489 10.8755 7.06489 10.4545
                   6.80519 10.1948L2.60391 5.99351L6.80523 1.79219C7.06492 1.53249 7.06492 1.11144 6.80522 0.85174C6.54553 0.592042 6.12447 0.592042 5.86477 0.85174L1.19606
@@ -269,7 +271,7 @@
 
               <img class="slider__third-image" width="306" height="507" src="./images/slider-ice-caramel.png" alt="Фото карамельного пломбира с маршмеллоу.">
 
-              <button class="slider__button-scroll button_scroll-right visually-hidden" type="button">
+              <button class="slider__button-scroll button_scroll-right slider__item_hidden" type="button">
                 <svg aria-hidden="true" focusable="false" width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path fill-rule="evenodd" clip-rule="evenodd" d="M5.86474 11.1352C6.12443 11.3949 6.54549 11.3949 6.80519 11.1352C7.06489 10.8755 7.06489 10.4545
                   6.80519 10.1948L2.60391 5.99351L6.80523 1.79219C7.06492 1.53249 7.06492 1.11144 6.80522 0.85174C6.54553 0.592042 6.12447 0.592042 5.86477 0.85174L1.19606
@@ -377,7 +379,7 @@
             <p class="catalog__card-text">Сливочное мороженое с малиновым джемом</p>
             <div class="catalog__price-container">
               <span class="catalog__card-price">310 ₽/кг</span>
-              <button class="catalog__card-basket">
+              <button class="catalog__card-basket" type="submit">
                 <svg class="catalog__card-basket-svg" aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path fill-rule="evenodd" clip-rule="evenodd" d="M1.16667 1.25C0.798477 1.25 0.5 1.54848 0.5 1.91667C0.5 2.28486 0.798477 2.58333
                   1.16667 2.58333H2.93794L3.40537 4.91872C3.40821 4.93667 3.41176 4.95438 3.416 4.97182L4.38338 9.80515L4.3835 9.80571C4.46706 10.2257
@@ -401,7 +403,7 @@
             <p class="catalog__card-text">Фисташковый пломбир с кусочками шоколада</p>
             <div class="catalog__price-container">
               <span class="catalog__card-price">340 ₽/кг</span>
-              <button class="catalog__card-basket">
+              <button class="catalog__card-basket" type="submit">
                 <svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path class="catalog__card-basket-svg" fill-rule="evenodd" clip-rule="evenodd" d="M1.16667 1.25C0.798477 1.25 0.5 1.54848 0.5 1.91667C0.5 2.28486 0.798477 2.58333
                   1.16667 2.58333H2.93794L3.40537 4.91872C3.40821 4.93667 3.41176 4.95438 3.416 4.97182L4.38338 9.80515L4.3835 9.80571C4.46706 10.2257
@@ -425,7 +427,7 @@
             <p class="catalog__card-text">Крем-брюле <br>с черничным джемом</p>
             <div class="catalog__price-container">
               <span class="catalog__card-price">330 ₽/кг</span>
-              <button class="catalog__card-basket">
+              <button class="catalog__card-basket" type="submit">
                 <svg class="catalog__card-basket-svg" aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path fill-rule="evenodd" clip-rule="evenodd" d="M1.16667 1.25C0.798477 1.25 0.5 1.54848 0.5 1.91667C0.5 2.28486 0.798477 2.58333
                   1.16667 2.58333H2.93794L3.40537 4.91872C3.40821 4.93667 3.41176 4.95438 3.416 4.97182L4.38338 9.80515L4.3835 9.80571C4.46706 10.2257
@@ -449,7 +451,7 @@
             <p class="catalog__card-text">Ванильный пломбир <br>со сладкой посыпкой</p>
             <div class="catalog__price-container">
               <span class="catalog__card-price">320 ₽/кг</span>
-              <button class="catalog__card-basket">
+              <button class="catalog__card-basket" type="submit">
                 <svg class="catalog__card-basket-svg" aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path fill-rule="evenodd" clip-rule="evenodd" d="M1.16667 1.25C0.798477 1.25 0.5 1.54848 0.5 1.91667C0.5 2.28486 0.798477 2.58333
                   1.16667 2.58333H2.93794L3.40537 4.91872C3.40821 4.93667 3.41176 4.95438 3.416 4.97182L4.38338 9.80515L4.3835 9.80571C4.46706 10.2257
@@ -521,12 +523,12 @@
               <div class="dilivery__tooltip-container">
                 <label class="dilivery__label" for="data-input">Дата</label>
                 <span class="dilivery__tooltip">
-                  <button class="dilivery__tooltip-button"></button>
+                  <button class="dilivery__tooltip-button" type="button"></button>
                   <span class="dilivery__tooltip-text">Введите дату доставки</span>
                 </span>
               </div>
 
-              <input class="dilivery__data-input input" type="data" name="data-input" id="data-input" placeholder="01.04.2020" required>
+              <input class="dilivery__data-input input" type="number" name="data-input" id="data-input" placeholder="01.04.2020" required>
             </div>
             <div class="dilivery__telefone">
               <label class="dilivery__label" for="telefone-input">Телефон</label>
@@ -539,7 +541,7 @@
             <div class="dilivery__tooltip-container">
               <label class="dilivery__label" for="address-input">Адрес</label>
               <span class="dilivery__tooltip">
-                <button class="dilivery__tooltip-button"></button>
+                <button class="dilivery__tooltip-button" type="button"></button>
                 <span class="dilivery__tooltip-text">Введите название улицы, дома и квартиры</span>
               </span>
             </div>
@@ -636,7 +638,7 @@
     <div class="popup">
       <div class="popup__container">
 
-        <button class="popup__button_close">
+        <button class="popup__button_close" type="button">
           <span class="visually-hidden">Закрыть форму обратной связи.</span>
         </button>
         <h3 class="popup__title">Мы обязательно ответим вам!</h3>
@@ -650,7 +652,7 @@
 
           <label class="visually-hidden" for="message-input">Поле ввода сообщения.</label>
           <textarea class="input popup__input popup__input_message" name="message-input" id="message-input" rows="6" placeholder="В свободной форме" required></textarea>
-          <button class="popup__button_send button_color_pink">Отправить</button>
+          <button class="popup__button_send button_color_pink" type="submit">Отправить</button>
         </form>
       </div>
     </div>

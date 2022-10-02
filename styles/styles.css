@@ -450,6 +450,10 @@
   outline: none;
 }
 
+.slider__item_hidden {
+  display: none;
+}
+
 /* Стили для пагинации */
 .slider__pagination-and-socnetworks-container {
   width: 1172px;
@@ -585,6 +589,7 @@
   box-sizing: border-box;
   border-radius: 26px;
   box-shadow: 0 0 0 4px rgba(252, 252, 252, 0.4), 0 4px 12px rgba(45, 52, 64, 0.1);
+  outline: none;
 }
 
 /* Состояния для кнопок в блоке presents */
@@ -1024,6 +1029,12 @@
   width: 117px;
 }
 
+.dilivery__data-input::-webkit-outer-spin-button,
+.dilivery__data-input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
 .dilivey__telefone-input {
   width: 287px;
 }
@@ -1105,6 +1116,10 @@
 }
 
 .dilivery__tooltip:hover .dilivery__tooltip-text {
+  display: block;
+}
+
+.dilivery__tooltip-button:focus ~ .dilivery__tooltip-text {
   display: block;
 }
 
@@ -1360,7 +1375,7 @@
   outline: 2px solid #2D3440;
 }
 
-/* Стили для выпадающего меню НЕ РАБОТАЕТ НАДО ПОПРАВИТЬ*/
+/* Стили для выпадающего меню */
 .header__navigation-catalog {
   position: relative;
 }
@@ -2402,6 +2417,7 @@
   color: #2D3440;
   text-decoration: none;
   outline: none;
+  flex-shrink: 0;
 }
 
 .catalog__pagination-link:hover {
@@ -2426,7 +2442,7 @@
 .pagination_prev {
   width: 24px;
   height: 24px;
-  margin-right: 8px;
+  margin-right: 4px;
   display: inline-block;
   background-image: url(../images/pagination-arrow.svg);
   background-position: center;
@@ -2438,7 +2454,7 @@
 .pagination_next {
   width: 24px;
   height: 24px;
-  margin-left: 8px;
+  margin-left: 4px;
   display: inline-block;
   background-image: url(../images/pagination-arrow.svg);
   background-position: center;
