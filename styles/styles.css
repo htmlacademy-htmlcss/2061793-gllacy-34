@@ -1215,6 +1215,7 @@
   list-style-type: none;
   display: flex;
   flex-wrap: wrap;
+  row-gap: 5px;
 }
 
 .socnetworks__location_footer{
